@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         var response = ""
         val tag = binding.searchET.text
         try {
-            response = URL("https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=407784392dcf3a6de266c193706b2c2d&tags=$tag&format=json&nojsoncallback=1&auth_token=72157720827582711-c2c2cf195fd792c6&api_sig=367cb6e9c2419900a9d582cb784d49c4")
+            response = URL("https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=407784392dcf3a6de266c193706b2c2d&tags=$tag&format=json&nojsoncallback=1")
                 .readText()
         } catch (exception: Exception) {
             Log.d("fetch", "Couldn't fetch image $exception")
